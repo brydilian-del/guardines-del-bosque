@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardianes del Medio Ambiente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <a class="marca" href="#inicio" aria-label="Ir al inicio"><span>🌍</span><strong>Guardianes del Medio Ambiente</strong></a>
+    <div class="marcadores"><span id="puntuacion">⭐ 0%</span><span id="progreso">0/6 niveles</span></div>
+  </header>
+  <main>
+    <section class="pantalla activa portada" id="inicio">
+      <div class="portada-contenido">
+        <p class="etiqueta">Una aventura para cuidar nuestro planeta</p>
+        <h1>Guardianes del<br><em>Medio Ambiente</em></h1>
+        <p class="intro">Aprende, decide y supera desafíos para convertirte en un guardián capaz de proteger el agua, los bosques, la energía y la vida.</p>
+        <div class="acciones-principales">
+          <button class="boton boton-destacado" id="comenzar">Comenzar juego <span>→</span></button>
+          <button class="boton boton-claro" id="como-jugar">Cómo jugar</button>
+          <button class="boton boton-claro" id="aprender">Aprender</button>
+        </div>
+      </div>
+      <div class="planeta" aria-hidden="true"><span>🌎</span><small>Tu misión empieza aquí</small></div>
+    </section>
+    <section class="pantalla" id="niveles">
+      <div class="encabezado-seccion"><div><p class="etiqueta">Tu recorrido · 🎮 Área de juegos</p><h2>Elige una aventura</h2><p class="subtitulo-juegos">Cada desafío desbloquea una nueva forma de proteger el planeta.</p></div><button class="boton boton-claro boton-pequeno" data-inicio>Inicio</button></div>
+      <div class="barra-progreso"><span id="barra-progreso"></span></div><p class="texto-progreso" id="texto-progreso">Completa los niveles en orden para avanzar.</p>
+      <div class="grid-niveles" id="grid-niveles"></div>
+    </section>
+    <section class="pantalla" id="juego">
+      <button class="boton-volver" id="volver-niveles">← Volver a niveles</button>
+      <div class="encabezado-juego"><div><p class="etiqueta" id="nivel-etiqueta"></p><h2 id="nivel-titulo"></h2></div><span class="contador" id="contador-pregunta"></span></div>
+      <div class="tarjeta-pregunta" id="tarjeta-pregunta"><div id="actividad"></div><p class="feedback" id="feedback"></p></div>
+      <div class="pantalla-resultado oculto" id="resultado"><div class="resultado-icono" id="resultado-icono">🌟</div><h2 id="resultado-titulo"></h2><p id="resultado-texto"></p><button class="boton boton-destacado" id="resultado-accion">Continuar</button></div>
+    </section>
+    <section class="pantalla panel-informacion" id="como-jugar-panel">
+      <button class="boton-volver" data-inicio>← Volver al inicio</button><p class="etiqueta">Reglas de la aventura</p><h2>Cómo jugar</h2>
+      <div class="pasos"><div><b>01</b><h3>Elige un nivel</h3><p>Los niveles se desbloquean en orden.</p></div><div><b>02</b><h3>Lee y decide</h3><p>Selecciona la acción que mejor protege el ambiente.</p></div><div><b>03</b><h3>Aprende y suma</h3><p>Cada respuesta correcta suma puntos y hace avanzar tu misión.</p></div></div>
+    </section>
+    <section class="pantalla panel-informacion" id="aprender-panel">
+      <button class="boton-volver" data-inicio>← Volver al inicio</button><p class="etiqueta">Ideas para recordar</p><h2>Aprender también es proteger</h2>
+      <div class="aprendizajes">
+        <article><h3>💧 Cuidado del agua</h3><p>El agua dulce es limitada y todos los seres vivos la necesitan. Cierra la llave, repara las fugas y nunca arrojes basura, aceite o químicos a los ríos.</p></article>
+        <article><h3>🌳 Protección de los bosques</h3><p>Los árboles producen oxígeno, protegen el suelo y ofrecen hogar. Reforestar, respetar los senderos y no dejar basura ayuda a conservarlos.</p></article>
+        <article><h3>♻️ Reciclaje</h3><p>Separar los residuos permite aprovechar los materiales. Reduce lo que compras, reutiliza lo que puedas y entrega papel, vidrio, metal y plástico en el recipiente adecuado.</p></article>
+        <article><h3>⚡ Ahorro de energía</h3><p>Apaga las luces, desconecta cargadores y aprovecha la luz natural. La energía solar y el viento son fuentes renovables que contaminan menos.</p></article>
+        <article><h3>🦜 Biodiversidad</h3><p>La biodiversidad incluye animales, plantas, hongos y microorganismos. Cada especie cumple una función, por eso debemos proteger sus hogares y no comprar animales silvestres.</p></article>
+        <article><h3>🌎 Misión final</h3><p>Cuidar el ambiente es actuar todos los días: ahorrar agua y energía, reducir residuos, respetar los ecosistemas y compartir lo aprendido con otras personas.</p></article>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
